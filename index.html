@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول العملات العراقي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>محول العملات</h1>
+        <p class="subtitle">الدينار العراقي والدولار الأمريكي</p>
+
+        <div class="rate-box">
+            <h3>أسعار صرف الدولار في العراق</h3>
+
+            <p id="buyRate">سعر الشراء: جاري التحميل...</p>
+            <p id="sellRate">سعر البيع: جاري التحميل...</p>
+            <p id="officialRate">السعر الرسمي: جاري التحميل...</p>
+
+            <p id="updateTime"></p>
+
+            <button onclick="loadExchangeRates()">
+                تحديث الأسعار
+            </button>
+        </div>
+
+        <label for="amount">أدخل المبلغ:</label>
+        <input type="number" id="amount" placeholder="اكتب المبلغ">
+
+        <label for="conversion">اختر عملية التحويل:</label>
+
+        <select id="conversion">
+            <option value="iqd-usd">
+                من الدينار العراقي إلى الدولار
+            </option>
+
+            <option value="usd-iqd">
+                من الدولار إلى الدينار العراقي
+            </option>
+        </select>
+
+        <button onclick="convertCurrency()">
+            تحويل العملة
+        </button>
+
+        <div id="result">
+            نتيجة التحويل ستظهر هنا
+        </div>
+
+        <p class="source">
+            مصدر البيانات:
+            <a href="https://iraqsm.com/" target="_blank">
+                IQWealth
+            </a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
